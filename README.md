@@ -132,8 +132,11 @@ HidroSafe.API/
 
 ## 📸 Imagens do Sistema
 
+### 📍 GET de Estações pelo Swagger
+
 ![GET de estações pelo swagger](imagens/estacoes.png)
 
+### 📍 GET de Leituras pelo Swagger
 
 ![GET de leitura pelo swagger](imagens/leitura.png)
 
