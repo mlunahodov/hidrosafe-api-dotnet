@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HidroSafe.API</name>
+    </assembly>
+    <members>
+        <member name="T:HidroSafe.API.Controllers.EstacoesController">
+            <summary>
+            Controlador responsável por gerenciar estações de monitoramento.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.EstacoesController.Get">
+            <summary>
+            Lista todas as estações de monitoramento.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.EstacoesController.Get(System.Int32)">
+            <summary>
+            Retorna uma estação específica pelo ID.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.EstacoesController.Post(HidroSafe.API.Models.Dtos.EstacaoMonitoramentoDto)">
+            <summary>
+            Cadastra uma nova estação de monitoramento.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.EstacoesController.Put(System.Int32,HidroSafe.API.Models.Dtos.EstacaoMonitoramentoDto)">
+            <summary>
+            Atualiza os dados de uma estação existente.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.EstacoesController.Delete(System.Int32)">
+            <summary>
+            Remove uma estação pelo ID.
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Controllers.LeiturasController">
+            <summary>
+            Controlador responsável pelas leituras de distância da água nas estações.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.LeiturasController.Get">
+            <summary>
+            Lista todas as leituras registradas.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.LeiturasController.Get(System.Int32)">
+            <summary>
+            Retorna uma leitura específica pelo ID.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.LeiturasController.Post(HidroSafe.API.Models.LeituraDistancia)">
+            <summary>
+            Cadastra uma nova leitura de distância da água.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Controllers.LeiturasController.Delete(System.Int32)">
+            <summary>
+            Remove uma leitura pelo ID.
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Data.AppDbContext">
+            <summary>
+            Contexto de banco de dados principal da aplicação HidroSafe.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Data.AppDbContext.Estacoes">
+            <summary>
+            Representa a tabela de estações de monitoramento.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Data.AppDbContext.Leituras">
+            <summary>
+            Representa a tabela de leituras de distância da água.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Data.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configura o modelo das entidades e popula dados iniciais.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Data.AppDbContext.Seed(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Adiciona dados iniciais ao banco (seeding).
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Migrations.Inicial">
+            <inheritdoc />
+        </member>
+        <member name="M:HidroSafe.API.Migrations.Inicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HidroSafe.API.Migrations.Inicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HidroSafe.API.Migrations.Inicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HidroSafe.API.Models.Dtos.EstacaoMonitoramentoDto">
+            <summary>
+            DTO utilizado para entrada e saída de dados da estação.
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Models.Dtos.LeituraDistanciaDto">
+            <summary>
+            DTO para leitura de distância com nome da estação.
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Models.EstacaoMonitoramento">
+            <summary>
+            Representa uma estação de monitoramento responsável por registrar leituras de distância da água.
+            </summary>
+        </member>
+        <member name="M:HidroSafe.API.Models.EstacaoMonitoramento.#ctor">
+            <summary>
+            Construtor que inicializa listas e strings obrigatórias.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.EstacaoMonitoramento.Id">
+            <summary>
+            Identificador único da estação.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.EstacaoMonitoramento.Nome">
+            <summary>
+            Nome da estação.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.EstacaoMonitoramento.Localizacao">
+            <summary>
+            Localização da estação.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.EstacaoMonitoramento.DataInstalacao">
+            <summary>
+            Data de instalação da estação.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.EstacaoMonitoramento.Leituras">
+            <summary>
+            Leituras associadas à estação.
+            </summary>
+        </member>
+        <member name="T:HidroSafe.API.Models.LeituraDistancia">
+            <summary>
+            Representa uma leitura de distância da água em uma estação de monitoramento.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.Id">
+            <summary>
+            Identificador único da leitura.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.DataHora">
+            <summary>
+            Data e hora em que a leitura foi registrada.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.DistanciaMargemCm">
+            <summary>
+            Distância medida da água até a margem (em centímetros).
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.EstacaoMonitoramentoId">
+            <summary>
+            Identificador da estação de monitoramento associada.
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.EstacaoMonitoramento">
+            <summary>
+            Estação de monitoramento relacionada à leitura. (Não obrigatória no POST)
+            </summary>
+        </member>
+        <member name="P:HidroSafe.API.Models.LeituraDistancia.Status">
+            <summary>
+            Status do nível de água com base na distância da margem.
+            </summary>
+        </member>
+    </members>
+</doc>

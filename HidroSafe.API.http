@@ -1,0 +1,6 @@
+@HidroSafe.API_HostAddress = http://localhost:5120
+
+GET {{HidroSafe.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
