@@ -22,10 +22,9 @@ O Sistema foi desenvolvido em ASP.NET Core 8.0 com Entity Framework Core, Oracle
 
 ```mermaid
 graph TD
-    A[Frontend Razor Pages] --> B[API .NET Core]
-    B --> C[EF Core]
-    C --> D[(Banco Oracle)]
-    B --> E[Swagger / Testes]
+    A --> C[EF Core]
+    B --> D[(Banco Oracle)]
+    C --> E[Swagger / Testes]
 ```
 
 - **Backend (API RESTful):** Responsável por controlar estações de monitoramento e leituras de distância da água.
