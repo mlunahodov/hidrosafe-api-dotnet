@@ -22,14 +22,14 @@ O Sistema foi desenvolvido em ASP.NET Core 8.0 com Entity Framework Core, Oracle
 
 ```mermaid
 graph TD
-    A --> C[EF Core]
-    B --> D[(Banco Oracle)]
-    C --> E[Swagger / Testes]
+    A[API .NET Core] --> B[EF Core]
+    B --> C[(Banco de Dados Oracle)]
+    A --> D[Swagger / Testes com Postman]
 ```
 
 - **Backend (API RESTful):** Responsável por controlar estações de monitoramento e leituras de distância da água.
-- **Database:** Oracle XE em container Docker.
-- **Documentação:** Swagger com OpenAPI v3.
+- **Database:** Oracle.
+- **Documentação:** Swagger
 - **Migrations:** Usadas para controle de versionamento do banco de dados.
 
 ## 🧩 Funcionalidades
